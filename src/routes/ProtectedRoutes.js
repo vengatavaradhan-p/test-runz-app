@@ -7,7 +7,7 @@ import AppMenus from "../components/layout/AppMenus";
 import AppProfileDrawer from "../components/layout/AppProfileDrawer";
 import AppNotificationeDrawer from "../components/layout/AppNotificationDrawer";
 
-function PrivateRoutes({ isSignedIn = true, children }) {
+function PrivateRoutes({ isSignedIn = false, children }) {
   const [width, setWidth] = React.useState(290);
   const [editProfile, setEditProfile] = React.useState(false);
   const [notificationList, setNotificationList] = React.useState(false);
@@ -36,7 +36,7 @@ function PrivateRoutes({ isSignedIn = true, children }) {
   };
 
   if (!isSignedIn) {
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/login2" replace />;
   }
   return (
     <ThemeProvider theme={theme}>
