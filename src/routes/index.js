@@ -10,6 +10,7 @@ import BillingSubscriptions from "../pages/billing-subscriptions";
 import ProtectedRoutes from "./ProtectedRoutes";
 import Login from "../pages/login";
 import Login2 from "../pages/login/Login";
+import SignUp from "../pages/signup";
 
 export default function AppRouter() {
   return (
@@ -18,6 +19,7 @@ export default function AppRouter() {
         <Route path="/" element={  <ProtectedRoutes><MyPage /></ProtectedRoutes>} />
         <Route path="/login" element={<Login />} />
         <Route path="/login2" element={<Login2 />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route
           path="/mypage"
           element={
